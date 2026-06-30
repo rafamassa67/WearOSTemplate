@@ -5,9 +5,12 @@
 
 package com.ifpr.wearostemplate.presentation
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.ifpr.wearostemplate.PerfilActivity
 import com.ifpr.wearostemplate.R
 
 class MainActivity : ComponentActivity() {
@@ -19,6 +22,13 @@ class MainActivity : ComponentActivity() {
         setTheme(android.R.style.Theme_DeviceDefault)
 
         setContentView(R.layout.activity_main)
+
+        val buttonPerfil = findViewById<Button>(R.id.btnPerfil)
+        buttonPerfil.setOnClickListener {
+            val intent = Intent(baseContext, PerfilActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 

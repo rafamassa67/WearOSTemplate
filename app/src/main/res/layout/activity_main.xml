@@ -4,45 +4,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#121212"
-    android:padding="24dp">
+    android:background="#000000"
+    android:gravity="center_horizontal"
+    android:padding="6dp">
 
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TÍTULO"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:letterSpacing="0.08"
-        android:layout_marginBottom="32dp"/>
+    <!-- LOGO -->
+    <!-- Troque android:src pela sua logo -->
 
+    <!-- CARD -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:background="#121212"
+        android:padding="10dp">
 
-        <Button
-            android:id="@+id/btnPlay"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:backgroundTint="#2D2D2D"
-            android:text="PLAY"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:text="TEMPO"
+            android:textColor="#777777"
+            android:textSize="9sp"/>
 
-        <Button
-            android:id="@+id/btnStop"
+        <TextView
+            android:id="@+id/txtTempo"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginStart="12dp"
-            android:backgroundTint="#444444"
-            android:text="STOP"
+            android:layout_height="wrap_content"
+            android:text="00:00"
             android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textSize="26sp"
+            android:textStyle="bold"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DISTÂNCIA"
+            android:textColor="#777777"
+            android:textSize="9sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/txtDistancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00 km"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
     </LinearLayout>
+
+    <!-- BOTÕES -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btnIniciar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="▶"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:backgroundTint="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnParar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="■"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#252525"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#303030"
+        android:text="PERFIL"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
